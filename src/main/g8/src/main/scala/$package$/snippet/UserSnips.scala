@@ -83,7 +83,7 @@ object ProfileLocUser extends UserSnippet {
   def profile(xhtml: NodeSeq): NodeSeq = serve { user =>
     val editLink: NodeSeq =
       if (User.currentUser.filter(_.id.is == user.id.is).isDefined)
-        <a href={Site.editProfile.url} class="btn info">Edit Your Profile</a>
+        <a href={Site.editProfile.url} class="btn btn-info">Edit Your Profile</a>
       else
         NodeSeq.Empty
 

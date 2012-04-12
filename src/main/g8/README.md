@@ -8,7 +8,7 @@ you must run, in the project root directory:
     git submodule init
     git add modules/bootstrap
     cd modules/bootstrap
-    git co v1.4.0
+    git co v2.0.2
 
 This will pull in the necessary files. Note this template is built against twitter-bootstrap v1.4.0,
 so you'll need to checkout that tag.

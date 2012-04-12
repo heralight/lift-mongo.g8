@@ -27,14 +27,16 @@
     -->
   </head>
   <body>
-    <div class="topbar">
-      <div class="fill">
+    <div id="navbar" class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="/">$name$</a>
-          <ul class="nav">
-            <span lift="GroupMenu?group=topbar;current_class=active"></span>
-          </ul>
-          <span lift="UserTopbar"></span>
+		   <div class="nav-collapse">
+			  <ul class="nav">
+				<span lift="GroupMenu?group=topbar;current_class=active"></span>
+			  </ul>
+			  <span lift="UserTopbar"></span>
+		   </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>

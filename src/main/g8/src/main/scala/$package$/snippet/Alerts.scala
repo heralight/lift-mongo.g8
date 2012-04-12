@@ -31,14 +31,14 @@ object BootstrapAlerts extends Factory with Loggable {
         notices(messages).toList match {
           case msgs if (msgs.length == 0) => Nil
           case msgs if (msgs.length == 1) =>
-            <div id={noticeType.id} class={"alert-message %s".format(lowerCaseTitle(noticeType))} data-alert="">
-              <a class="close" href="#">&times;</a>
+            <div id={noticeType.id} class={"alert alert-%s".format(lowerCaseTitle(noticeType))} data-alert="">
+              <a class="close" data-dismiss="alert">&times;</a>
               <p>{noticeTitle(noticeType).map(t => <strong>{t}</strong>).openOr(Text(""))} {msgs(0)}</p>
             </div>
           case msgs =>
-            <div id={noticeType.id} class={"alert-message %s".format(lowerCaseTitle(noticeType))} data-alert="">
+            <div id={noticeType.id} class={"alert alert-%s".format(lowerCaseTitle(noticeType))} data-alert="">
               {noticeTitle(noticeType).map(t => <strong>{t}</strong>).openOr(Text(""))}
-              <a class="close" href="#">&times;</a>
+              <a class="close" data-dismiss="alert">&times;</a>
               { msgs.flatMap(e => { <p>{e}</p> }) }
             </div>
         }
